@@ -481,6 +481,52 @@ section {
     font-size: 0.9rem;
 }
 
+/* Hobbies in Skills Section */
+.hobbies-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.hobbies-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hobbies-section .hobby-tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+.hobbies-section .hobby-tag {
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--secondary-color);
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hobbies-section .hobby-tag:hover {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.hobbies-section .hobby-tag i {
+    font-size: 0.9rem;
+}
+
 /* Skills Section */
 .skills-categories {
     display: grid;
@@ -533,6 +579,15 @@ section {
     font-size: 2rem;
     color: var(--primary-color);
     min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .skill-name {
@@ -740,6 +795,18 @@ section {
 .social-link i {
     font-size: 1.5rem;
     color: var(--primary-color);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: none;
 }
 
 .social-link.email:hover i { color: #ea4335; }
@@ -995,7 +1062,8 @@ section {
         gap: 2rem;
     }
 
-    .hobby-tags {
+    .hobby-tags,
+    .hobbies-section .hobby-tags {
         grid-template-columns: 1fr;
     }
 
