@@ -366,105 +366,119 @@ section {
     background: var(--bg-secondary);
 }
 
-.about-content {
+.about-content-new {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 3rem;
+    align-items: start;
 }
 
-.bio-card {
+.about-main-card {
     background: var(--bg-card);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 20px;
     border: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.bio-title {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-.bio-description {
+.about-intro p {
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.8;
+    font-size: 1.1rem;
 }
 
-.academic-info,
-.interests {
-    margin-bottom: 2rem;
-}
-
-.academic-info h4,
-.interests h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.about-info-cards {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.interest-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tag {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    color: var(--bg-primary);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.profile-card {
+.info-card {
     background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 20px;
+    padding: 1.5rem;
+    border-radius: 15px;
     border: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
-.profile-avatar {
-    font-size: 8rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    text-shadow: 0 0 20px var(--glow-color);
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 12px 35px rgba(0, 245, 255, 0.15);
 }
 
-.profile-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.info-card .card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
-.stat {
-    text-align: center;
+.info-card .card-icon i {
+    font-size: 1.2rem;
+    color: var(--bg-primary);
 }
 
-.stat-number {
-    display: block;
+.info-card h3 {
     font-family: 'Orbitron', monospace;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-    text-shadow: 0 0 10px var(--purple-glow);
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
 }
 
-.stat-label {
-    font-size: 0.9rem;
+.info-card p {
     color: var(--text-secondary);
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+}
+
+.interest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.interest-list span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+}
+
+.hobby-tags {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.hobby-tag {
+    background: rgba(0, 245, 255, 0.1);
+    color: var(--primary-color);
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(0, 245, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hobby-tag:hover {
+    background: rgba(0, 245, 255, 0.2);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.hobby-tag i {
+    font-size: 0.9rem;
 }
 
 /* Skills Section */
@@ -975,9 +989,14 @@ section {
         gap: 0.5rem;
     }
 
-    .about-content {
+    .about-content,
+    .about-content-new {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .hobby-tags {
+        grid-template-columns: 1fr;
     }
 
     .skills-categories {
@@ -1034,7 +1053,9 @@ section {
     .bio-card,
     .profile-card,
     .skill-category,
-    .contact-form-container {
+    .contact-form-container,
+    .about-main-card,
+    .info-card {
         padding: 1.5rem;
     }
 
