@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Hussain - Cyberpunk Portfolio</title>
+    <meta name="description" content="Personal portfolio of Mohammed Hussain - Software Developer & Tech Enthusiast">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MH</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="MOHAMMED HUSSAIN">MOHAMMED HUSSAIN</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Welcome to my digital realm. I craft code, build dreams, and navigate the cyber frontier.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Explore
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Connect
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="cyber-grid"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-user-astronaut"></i>
+                About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="bio-card">
+                        <h3 class="bio-title">Digital Explorer</h3>
+                        <p class="bio-description">
+                            I'm Mohammed Hussain, a passionate software developer and tech enthusiast navigating the ever-evolving landscape of technology. With a keen interest in cutting-edge development practices and innovative solutions, I transform ideas into digital reality.
+                        </p>
+                        <div class="academic-info">
+                            <h4><i class="fas fa-graduation-cap"></i> Academic Journey</h4>
+                            <p>Currently pursuing my passion for technology through continuous learning and hands-on experience in software development, always staying ahead of the curve in this fast-paced digital world.</p>
+                        </div>
+                        <div class="interests">
+                            <h4><i class="fas fa-heart"></i> Interests & Hobbies</h4>
+                            <div class="interest-tags">
+                                <span class="tag"><i class="fas fa-code"></i> Coding</span>
+                                <span class="tag"><i class="fas fa-gamepad"></i> Gaming</span>
+                                <span class="tag"><i class="fas fa-music"></i> Music</span>
+                                <span class="tag"><i class="fas fa-robot"></i> AI/ML</span>
+                                <span class="tag"><i class="fas fa-camera"></i> Photography</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-number" data-count="100">0</span>
+                                <span class="stat-label">Projects Coded</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="50">0</span>
+                                <span class="stat-label">Technologies</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="24">0</span>
+                                <span class="stat-label">Hours/Day Coding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-brain"></i>
+                Skills & Technologies
+            </h2>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <!-- Technical Skills -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i>
+                            Technical Skills
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <span class="skill-name">CSS3</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js-square"></i>
+                                </div>
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <span class="skill-name">Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <span class="skill-name">React</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="category-title">
+                            <i class="fas fa-lightbulb"></i>
+                            Soft Skills
+                        </h3>
+                        <div class="soft-skills">
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span>Problem Solving</span>
+                            </div>
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+                                    </svg>
+                                </div>
+                                <span>Time Management</span>
+                            </div>
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01.99l-2.98 3.93L8.5 11.5c-.8-.8-2.07-.8-2.87 0s-.8 2.07 0 2.87L9 17.74V22h2v-3l-2.05-2.05 1.73-1.73L13.5 18v4h2z"/>
+                                    </svg>
+                                </div>
+                                <span>Team Collaboration</span>
+                            </div>
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19V1h-2v1H7V1H5v1H3.5C2.67 2 2 2.67 2 3.5v16C2 20.33 2.67 21 3.5 21h17c.83 0 1.5-.67 1.5-1.5v-16C22 2.67 21.33 2 20.5 2z"/>
+                                    </svg>
+                                </div>
+                                <span>Adaptability</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-rocket"></i>
+                Projects
+            </h2>
+            <div class="projects-content">
+                <div class="coming-soon-card" data-aos="zoom-in">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-cog fa-spin"></i>
+                        </div>
+                        <h3 class="card-title">Amazing Projects</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Exciting projects are currently in development. Stay tuned for innovative solutions and cutting-edge applications that will showcase the full spectrum of modern development capabilities.
+                        </p>
+                        <div class="coming-soon-animation">
+                            <div class="loading-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <p class="coming-soon-text">Coming Soon...</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-satellite-dish"></i>
+                Connect With Me
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 class="contact-subtitle">Let's Build Something Amazing</h3>
+                    <p class="contact-description">
+                        Ready to collaborate or discuss exciting opportunities? Reach out through any of these channels and let's create something extraordinary together.
+                    </p>
+                    <div class="social-links">
+                        <a href="mailto:mithanihussain.123@gmail.com" class="social-link email" target="_blank">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://github.com/MHK-123" class="social-link github" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://instagram.com/insane_mh123" class="social-link instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://linkedin.com/in/mohammed-hussain-6306a1334" class="social-link linkedin" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link discord" onclick="copyDiscord()">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="form-error" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <span class="form-error" id="subject-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="form-error" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Mohammed Hussain. Crafted with <i class="fas fa-heart"></i> and lots of coffee.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
