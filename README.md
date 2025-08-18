@@ -4,7 +4,7 @@ A futuristic cyberpunk-themed personal portfolio website showcasing skills, proj
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [Your GitHub Pages URL]
+Visit the live portfolio: https://mhk-123.github.io/Portfolio/
 
 ## ✨ Features
 
