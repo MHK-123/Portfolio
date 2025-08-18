@@ -6,10 +6,6 @@ A futuristic cyberpunk-themed personal portfolio website showcasing skills, proj
 
 Visit the live portfolio: [Your GitHub Pages URL]
 
-## 📸 Preview
-
-![Portfolio Preview](https://via.placeholder.com/800x400/0a0a0a/00f5ff?text=Cyberpunk+Portfolio)
-
 ## ✨ Features
 
 ### 🎨 Design
