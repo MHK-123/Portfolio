@@ -369,7 +369,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const txtElement = document.getElementById('typing-text');
     const words = [
         'Software Developer',
-        'Tech Enthusiast',
+        'Bot Developer',
+        'Tech Enthusiast', 
         'Problem Solver',
         'Code Architect',
         'Digital Creator',
@@ -430,36 +431,27 @@ document.querySelectorAll('.skill-item').forEach(item => {
     });
 });
 
-// Add 3D effect to buttons
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-        btn.style.transform = 'translateY(-3px) rotateX(10deg)';
+// AOS Animation trigger
+const addAOSAnimations = () => {
+    const elements = document.querySelectorAll('[data-aos]');
+    elements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
-    
-    btn.addEventListener('mouseleave', () => {
-        btn.style.transform = 'translateY(0) rotateX(0deg)';
-    });
+};
+
+// Initialize AOS-like animations
+document.addEventListener('DOMContentLoaded', () => {
+    addAOSAnimations();
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallax = document.querySelector('.cyber-grid');
-    if (parallax) {
-        const speed = scrolled * 0.5;
-        parallax.style.transform = `translateY(${speed}px)`;
+// Custom AOS animate class
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+    .aos-animate {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
     }
-});
-
-// Loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
-console.log('🚀 Mohammed Hussain Portfolio - Cyberpunk Theme Activated!');
-console.log('💻 Welcome to the digital frontier...');
+`;
+document.head.appendChild(styleSheet);
