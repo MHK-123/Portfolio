@@ -82,8 +82,6 @@ portfolio/
 ├── style.css           # Stylesheet with cyberpunk theme
 ├── script.js           # JavaScript for interactions
 ├── README.md           # Project documentation
-├── replit.md           # Technical architecture guide
-└── attached_assets/    # Design reference images
 ```
 
 ## 🎨 Customization
