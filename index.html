@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Hussain - Cyberpunk Portfolio</title>
+    <meta name="description" content="Personal portfolio of Mohammed Hussain - Software Developer & Tech Enthusiast">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MH</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Theme Toggler -->
+    <div class="theme-toggler">
+        <button class="theme-btn theme-cyan active" data-theme="cyan" title="Cyber Cyan"></button>
+        <button class="theme-btn theme-yellow" data-theme="yellow" title="Cyber Yellow"></button>
+        <button class="theme-btn theme-pink" data-theme="pink" title="Neon Pink"></button>
+        <button class="theme-btn theme-green" data-theme="green" title="Matrix Green"></button>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="MOHAMMED HUSSAIN">MOHAMMED HUSSAIN</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Welcome to my digital realm. I craft code, build dreams, and navigate the cyber frontier.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Explore
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Connect
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="cyber-grid"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-user-astronaut"></i>
+                About Me
+            </h2>
+            <div class="about-content-new">
+                <div class="about-main-card" data-aos="fade-right">
+                    <div class="about-intro">
+                        <p class="about-description">
+                            Hey, I'm Mohammed Hussain, an AI/ML student from Mumbai. I love exploring technology, building creative digital projects, and constantly pushing myself to learn more.
+                        </p>
+                        <p class="about-skills">
+                            My skills span from programming (Python, Java, C, web dev) to generative AI and community management. Outside of tech, I enjoy swimming, badminton, chess, and calisthenics — activities that sharpen my body and mind.
+                        </p>
+                        <p class="about-philosophy">
+                            I believe in balancing discipline with creativity, and I'm always excited to collaborate on impactful ideas.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-info-cards" data-aos="fade-left">
+                    <div class="info-card academic-card">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Academic Background</h3>
+                        <p>AI/ML Student, 2nd Year</p>
+                        <p>Mumbai, India</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Mini Terminal Section -->
+            <div class="terminal-container" data-aos="fade-up">
+                <div class="terminal-header">
+                    <span class="btn-close"></span>
+                    <span class="btn-minimize"></span>
+                    <span class="btn-maximize"></span>
+                    <span class="terminal-title">hussain@cyberpunk:~</span>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <p><span class="prompt" style="color: var(--primary-color);">root@cyberpunk:~$</span> ./show-easter-egg.sh</p>
+                    <p class="terminal-output" id="terminal-text"></p><span class="cursor" style="color: var(--primary-color); animation: blink 1s infinite;">_</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-brain"></i>
+                Skills & Technologies
+            </h2>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <!-- Technical Skills -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i>
+                            Technical Skills
+                        </h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                                </div>
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                                </div>
+                                <span class="skill-name">CSS3</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                                </div>
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                                </div>
+                                <span class="skill-name">Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C Programming">
+                                </div>
+                                <span class="skill-name">C Programming</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                                </div>
+                                <span class="skill-name">Git</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="65"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                                </div>
+                                <span class="skill-name">GitHub</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar" data-level="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="category-title">
+                            <i class="fas fa-lightbulb"></i>
+                            Soft Skills
+                        </h3>
+                        <div class="soft-skills">
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <span>Problem Solving</span>
+                            </div>
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/>
+                                    </svg>
+                                </div>
+                                <span>Time Management</span>
+                            </div>
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01.99l-2.98 3.93L8.5 11.5c-.8-.8-2.07-.8-2.87 0s-.8 2.07 0 2.87L9 17.74V22h2v-3l-2.05-2.05 1.73-1.73L13.5 18v4h2z"/>
+                                    </svg>
+                                </div>
+                                <span>Team Collaboration</span>
+                            </div>
+                            <div class="soft-skill">
+                                <div class="soft-skill-icon">
+                                    <svg viewBox="0 0 24 24" class="custom-icon">
+                                        <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19V1h-2v1H7V1H5v1H3.5C2.67 2 2 2.67 2 3.5v16C2 20.33 2.67 21 3.5 21h17c.83 0 1.5-.67 1.5-1.5v-16C22 2.67 21.33 2 20.5 2z"/>
+                                    </svg>
+                                </div>
+                                <span>Adaptability</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Hobbies Section -->
+                        <div class="hobbies-section">
+                            <h4 class="hobbies-title">
+                                <i class="fas fa-heart"></i>
+                                Hobbies
+                            </h4>
+                            <div class="hobby-tags">
+                                <span class="hobby-tag"><i class="fas fa-swimmer"></i> Swimming</span>
+                                <span class="hobby-tag"><i class="fas fa-fist-raised"></i> UFC</span>
+                                <span class="hobby-tag"><i class="fas fa-dumbbell"></i> Calisthenics</span>
+                                <span class="hobby-tag"><i class="fas fa-chess"></i> Chess</span>
+                                <span class="hobby-tag"><i class="fas fa-book"></i> Book Reading</span>
+                                <span class="hobby-tag"><i class="fas fa-code"></i> Coding</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-rocket"></i>
+                Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <!-- DungeonKeeper Discord Bot -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-glow"></div>
+                    <div class="project-header with-image">
+                        <div class="project-image-wrapper">
+                            <img src="dungeonkeeper.png" alt="DungeonKeeper Thumbnail">
+                        </div>
+                        <div class="project-status live status-floating">
+                            <i class="fas fa-circle"></i>
+                            <span>Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">🏰 DungeonKeeper</h3>
+                        <p class="project-subtitle">Discord Bot for Study Communities</p>
+                        <p class="project-description">
+                            A comprehensive Discord bot designed for study communities and educational servers with staff support, voice channel management, and productivity features.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li><i class="fas fa-headset"></i> Staff Support System with DM Bridge</li>
+                                <li><i class="fas fa-microphone"></i> Voice Channel Management</li>
+                                <li><i class="fas fa-clock"></i> Pomodoro Timer with XP Rewards</li>
+                                <li><i class="fas fa-trophy"></i> XP Leaderboard System</li>
+                                <li><i class="fas fa-quote-left"></i> Motivational Study Quotes</li>
+                                <li><i class="fas fa-bell"></i> Personal Reminder System</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Discord.py</span>
+                            <span class="tech-tag">Slash Commands</span>
+                            <span class="tech-tag">JSON</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mohdhussainprof-cpu/ModMail" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                            <a href="https://github.com/mohdhussainprof-cpu/ModMail#readme" target="_blank" class="btn btn-secondary">
+                                <i class="fas fa-book"></i>
+                                Documentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playlist Downloader -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-glow"></div>
+                    <div class="project-header with-image">
+                        <div class="project-image-wrapper">
+                            <img src="playlist.png" alt="Playlist Downloader Thumbnail">
+                        </div>
+                        <div class="project-status live status-floating">
+                            <i class="fas fa-circle"></i>
+                            <span>Live</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">🎵 Playlist Downloader</h3>
+                        <p class="project-subtitle">Automated Music Downloader</p>
+                        <p class="project-description">
+                            A clean, minimal, and easy-to-use utility for downloading entire playlists from Spotify and YouTube directly to local folders.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li><i class="fas fa-link"></i> Direct URL Downloading</li>
+                                <li><i class="fas fa-folder-open"></i> Auto Folder Organization</li>
+                                <li><i class="fab fa-spotify"></i> Spotify & YouTube Support</li>
+                                <li><i class="fas fa-fighter-jet"></i> Fast & Seamless Processing</li>
+                                <li><i class="fas fa-terminal"></i> Command-Line Interface</li>
+                                <li><i class="fas fa-headphones"></i> High-Quality Audio Extraction</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SpotDL</span>
+                            <span class="tech-tag">FFmpeg</span>
+                            <span class="tech-tag">CLI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MHK-123/Playlist-Downloader" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voyager AI -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-glow"></div>
+                    <div class="project-header with-image">
+                        <div class="project-image-wrapper">
+                            <img src="voyager.png" alt="Voyager AI Thumbnail">
+                        </div>
+                        <div class="project-status development status-floating">
+                            <i class="fas fa-circle"></i>
+                            <span>In Development</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">✈️ Voyager AI</h3>
+                        <p class="project-subtitle">Smart Travel Companion</p>
+                        <p class="project-description">
+                            A smart travel application that helps users plan trips, explore local culture, compare transport prices, and stay safe with real-time alerts. Voyager AI provides everything from itinerary planning to scam warnings, making travel easier and more reliable.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li>🌍 AI Trip Planning & Itineraries</li>
+                                <li>💰 Flight & Transport Price Comparison</li>
+                                <li>🗺️ Maps & Navigation with Nearby Places</li>
+                                <li>🏛️ Local Culture & Travel Guidelines</li>
+                                <li>⚠️ Safety Alerts & Scam Warnings</li>
+                                <li>🎒 Travel Preparation (visa, weather, packing)</li>
+                                <li>🚀 AI-based recommendations</li>
+                                <li>🚀 Real-time data integration</li>
+                                <li>🚀 User personalization</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Tailwind</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">APIs</span>
+                        </div>
+                        <div class="project-links">
+                            <button class="btn btn-disabled" disabled>
+                                <i class="fas fa-code"></i>
+                                In Development
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-satellite-dish"></i>
+                Connect With Me
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3 class="contact-subtitle">Let's Build Something Amazing</h3>
+                    <p class="contact-description">
+                        Ready to collaborate or discuss exciting opportunities? Reach out through any of these channels and let's create something extraordinary together.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://x.com/Its_MH123" class="social-link x-twitter" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X" class="social-icon" style="filter: invert(1);">
+                            <span>X account</span>
+                        </a>
+                        <a href="https://github.com/MHK-123" class="social-link github" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="social-icon">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://instagram.com/insane_mh123" class="social-link instagram" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://linkedin.com/in/mohammed-hussain-6306a1334" class="social-link linkedin" target="_blank">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="social-icon">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link discord" onclick="copyDiscord()">
+                            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" alt="Discord" class="social-icon">
+                            <span>Discord</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="form-error" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-error" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <span class="form-error" id="subject-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="form-error" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Mohammed Hussain. Crafted with <i class="fas fa-heart"></i> and lots of coffee.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Back to Top</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
