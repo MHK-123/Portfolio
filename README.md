@@ -4,7 +4,7 @@ A futuristic cyberpunk-themed personal portfolio website showcasing skills, proj
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: https://mhk-123.github.io/Portfolio/
+Visit the live portfolio: https://mhk-portfolio-one.vercel.app/
 
 ## ✨ Features
 
@@ -129,7 +129,7 @@ Update CSS custom properties in `style.css`:
 - **GitHub**: [@MHK-123](https://github.com/MHK-123)
 - **Instagram**: [@insane_mh123](https://instagram.com/insane_mh123)
 - **LinkedIn**: [mohammed-hussain-6306a1334](https://linkedin.com/in/mohammed-hussain-6306a1334)
-- **Discord**: tryintosurvive.
+- **Discord**: hussain.mhk
 
 ## 🤝 Contributing
 
