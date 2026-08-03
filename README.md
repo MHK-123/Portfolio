@@ -2,34 +2,34 @@
 
 A futuristic cyberpunk-themed personal portfolio website showcasing skills, projects, and contact information with interactive particle effects and smooth animations.
 
-## 🚀 Live Demo
+##  Live Demo
 
 Visit the live portfolio: https://www.mhk-portfolio.me/
 
-## ✨ Features
+##  Features
 
-### 🎨 Design
+###  Design
 - **Cyberpunk Aesthetic**: Dark theme with electric blue (#00f5ff), neon purple (#a855f7), and cyber cyan accents
 - **Interactive Particle Background**: Responsive particle system using Particles.js
 - **Glitch Text Effects**: Animated title with cyberpunk-style glitch effects
 - **Smooth Animations**: Scroll-triggered animations and hover effects
 - **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
 
-### 🔧 Interactive Elements
+###  Interactive Elements
 - **Typing Animation**: Dynamic typing effect in hero section
 - **Skill Progress Bars**: Animated skill level indicators
 - **3D Hover Effects**: CSS transforms on buttons and cards
 - **Smooth Scrolling**: Seamless navigation between sections
 - **Form Validation**: Real-time contact form validation
 
-### 📱 Sections
+###  Sections
 - **Hero Section**: Animated introduction with typing effect
 - **About Me**: Personal bio and academic background
 - **Skills**: Technical skills, soft skills, and hobbies showcase
 - **Projects**: Coming soon placeholder with futuristic styling
 - **Contact**: Interactive form and social media links
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 ### Frontend
 - **HTML5**: Semantic markup structure
@@ -48,7 +48,7 @@ Visit the live portfolio: https://www.mhk-portfolio.me/
 - Git, GitHub
 - Problem Solving, Time Management, Team Collaboration, Adaptability
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - A modern web browser
@@ -86,7 +86,7 @@ portfolio/
 └── attached_assets/    # Design reference images
 ```
 
-## 🎨 Customization
+##  Customization
 
 ### Colors
 Update CSS custom properties in `style.css`:
@@ -110,7 +110,7 @@ Update CSS custom properties in `style.css`:
 - **Particle Settings**: Modify `particlesJS` configuration
 - **Skill Levels**: Update `data-level` attributes in HTML
 
-## 🌐 Deployment
+##  Deployment
 
 ### GitHub Pages
 1. Push your code to a GitHub repository
@@ -123,7 +123,7 @@ Update CSS custom properties in `style.css`:
 - **Vercel**: Connect your GitHub repository
 - **Replit**: Import repository and run with HTTP server
 
-## 📧 Contact Information
+##  Contact Information
 
 - **Email**: mithanihussain.123@gmail.com
 - **GitHub**: [@MHK-123](https://github.com/MHK-123)
@@ -131,7 +131,7 @@ Update CSS custom properties in `style.css`:
 - **LinkedIn**: [mohammed-hussain-6306a1334](https://linkedin.com/in/mohammed-hussain-6306a1334)
 - **Discord**: hussain.mhk
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -139,11 +139,11 @@ Update CSS custom properties in `style.css`:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+##  License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 - [ ] Add real projects showcase
 - [ ] Implement dark/light theme toggle
@@ -154,7 +154,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [ ] Add loading animations
 - [ ] Include skills certificates
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **Particles.js** for the amazing particle background system
 - **Google Fonts** for the cyberpunk typography
