@@ -146,6 +146,7 @@ body {
     flex-direction: column;
     background: var(--bg-terminal);
     border-right: 1px solid var(--border);
+    cursor: text;
 }
 
 .preview-pane {
@@ -283,7 +284,6 @@ body {
     border-top: 1px solid var(--border);
     gap: 0.5rem;
     flex-shrink: 0;
-    position: relative;
 }
 
 .prompt {
@@ -294,25 +294,35 @@ body {
     flex-shrink: 0;
 }
 
-.terminal-input {
+.terminal-input-field {
     flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    cursor: text;
+}
+
+.terminal-input {
+    width: auto;
+    min-width: 2ch;
+    max-width: 100%;
+    field-sizing: content;
     background: transparent;
     border: none;
     outline: none;
     font-family: var(--font-mono);
     font-size: 0.8125rem;
+    line-height: 1.75;
     color: var(--white);
-    caret-color: transparent;
-    min-width: 0;
+    caret-color: var(--cyan);
+    padding: 0;
+    margin: 0;
 }
 
-.input-cursor {
-    width: 8px;
-    height: 1.1em;
-    background: var(--cyan);
-    animation: blink 1s step-end infinite;
-    flex-shrink: 0;
-    margin-left: -4px;
+@supports not (field-sizing: content) {
+    .terminal-input {
+        width: 2ch;
+    }
 }
 
 .autocomplete {

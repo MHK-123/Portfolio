@@ -27,7 +27,8 @@ export class Terminal {
     this.bootEl = elements.boot;
     this.workspaceEl = elements.workspace;
     this.promptEl = elements.prompt;
-    this.previewCloseEl = elements.previewClose;
+    this.terminalPaneEl = elements.terminalPane;
+    this.inputFieldEl = elements.inputField;
     this.previewOverlayEl = elements.previewOverlay;
     this.autocompleteEl = elements.autocomplete;
 
@@ -43,13 +44,44 @@ export class Terminal {
   init() {
     this.promptEl.textContent = PROMPT;
     this.applyTheme(this.currentTheme, false);
+    this.syncInputWidth();
     this.bindEvents();
     this.runBoot();
   }
 
+  focusInput() {
+    requestAnimationFrame(() => {
+      if (this.inputEl) {
+        this.inputEl.focus();
+        const len = this.inputEl.value.length;
+        this.inputEl.setSelectionRange(len, len);
+      }
+    });
+  }
+
+  syncInputWidth() {
+    if (typeof CSS !== 'undefined' && CSS.supports('field-sizing', 'content')) {
+      return;
+    }
+    const length = Math.max(this.inputEl.value.length + 1, 2);
+    this.inputEl.style.width = `${length}ch`;
+  }
+
   bindEvents() {
     this.inputEl.addEventListener('keydown', (e) => this.handleKeydown(e));
-    this.inputEl.addEventListener('input', () => this.updateAutocomplete());
+    this.inputEl.addEventListener('input', () => {
+      this.updateAutocomplete();
+      this.syncInputWidth();
+    });
+
+    if (this.terminalPaneEl) {
+      this.terminalPaneEl.addEventListener('click', (e) => {
+        if (e.target.closest('.autocomplete-item')) return;
+        if (e.target.closest('.terminal-header')) return;
+        this.focusInput();
+      });
+    }
+
     this.bootEl.addEventListener('click', () => this.enterTerminal());
     document.addEventListener('keydown', (e) => {
       if (!this.bootEl.classList.contains('hidden') && (e.key === 'Enter' || e.key === ' ')) {
@@ -57,10 +89,6 @@ export class Terminal {
         this.enterTerminal();
       }
     });
-
-    if (this.previewCloseEl) {
-      this.previewCloseEl.addEventListener('click', () => this.closePreviewOverlay());
-    }
 
     document.addEventListener('theme-change', (e) => {
       this.applyTheme(e.detail);
@@ -94,9 +122,9 @@ export class Terminal {
   enterTerminal() {
     this.bootEl.classList.add('hidden');
     this.workspaceEl.classList.remove('hidden');
-    this.inputEl.focus();
     this.showWelcomeBanner();
     this.setPreview(renderWelcome());
+    this.focusInput();
   }
 
   showWelcomeBanner() {
@@ -130,7 +158,12 @@ export class Terminal {
       e.preventDefault();
       this.hideAutocomplete();
       const value = this.inputEl.value.trim();
-      if (value) this.executeCommand(value);
+      if (value) {
+        this.executeCommand(value);
+      }
+      this.inputEl.value = '';
+      this.syncInputWidth();
+      this.focusInput();
       return;
     }
 
@@ -140,6 +173,7 @@ export class Terminal {
       if (this.historyIndex === -1) this.historyIndex = this.history.length - 1;
       else if (this.historyIndex > 0) this.historyIndex -= 1;
       this.inputEl.value = this.history[this.historyIndex];
+      this.syncInputWidth();
       return;
     }
 
@@ -153,6 +187,7 @@ export class Terminal {
         this.historyIndex = -1;
         this.inputEl.value = '';
       }
+      this.syncInputWidth();
     }
   }
 
@@ -308,6 +343,8 @@ export class Terminal {
         }
       }
     }
+
+    this.focusInput();
   }
 
   openProject(slug) {
@@ -386,6 +423,7 @@ export class Terminal {
     bindPreviewInteractions(this.previewEl, (slug) => {
       this.executeCommand(`open ${slug}`);
     });
+    this.focusInput();
   }
 
   closePreviewOverlay() {

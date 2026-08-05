@@ -96,8 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       boot: document.getElementById('boot-screen'),
       workspace: document.getElementById('terminal-workspace'),
+      terminalPane: document.getElementById('terminal-pane'),
       output: document.getElementById('terminal-output'),
       input: document.getElementById('terminal-input'),
+      inputField: document.querySelector('.terminal-input-field'),
       preview: document.getElementById('preview-content'),
       prompt: document.getElementById('terminal-prompt'),
       previewOverlay: document.getElementById('preview-panel'),

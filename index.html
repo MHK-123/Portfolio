@@ -21,7 +21,7 @@
     </div>
 
     <div id="terminal-workspace" class="workspace hidden">
-        <div class="terminal-pane">
+        <div class="terminal-pane" id="terminal-pane">
             <div class="terminal-header">
                 <div class="terminal-controls" aria-hidden="true">
                     <span class="ctrl ctrl-close"></span>
@@ -32,11 +32,12 @@
             </div>
             <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
             <div id="autocomplete" class="autocomplete hidden" aria-label="Command suggestions"></div>
-            <div class="terminal-input-row">
+            <div class="terminal-input-row" id="terminal-input-row">
                 <label for="terminal-input" class="sr-only">Terminal command input</label>
                 <span id="terminal-prompt" class="prompt">hussain@portfolio ❯</span>
-                <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Enter command">
-                <span class="input-cursor" aria-hidden="true"></span>
+                <div class="terminal-input-field">
+                    <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Enter command">
+                </div>
             </div>
         </div>
 
