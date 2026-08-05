@@ -6,6 +6,14 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+function renderProjectIcon(project) {
+  if (project.thumbnail) {
+    return `<img src="${project.thumbnail}" alt="" class="project-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span class="project-icon-fallback" style="display:none">${escapeHtml(project.name.charAt(0))}</span>`;
+  }
+  return `<span class="project-icon-fallback">${escapeHtml(project.name.charAt(0))}</span>`;
+}
+
 function renderThumbnail(project) {
   if (project.thumbnail) {
     return `<div class="preview-thumb"><img src="${project.thumbnail}" alt="${escapeHtml(project.name)}" onerror="this.parentElement.classList.add('${project.placeholderClass}'); this.remove();"></div>`;
@@ -101,10 +109,10 @@ export function renderSkills() {
 export function renderProjectsList() {
   const items = PORTFOLIO_DATA.projects
     .map(
-      (p, i) => `
+      (p) => `
       <button type="button" class="project-list-item" data-slug="${p.slug}">
-        <span class="project-num">${String(i + 1).padStart(2, '0')}</span>
-        <div>
+        <div class="project-icon-wrap">${renderProjectIcon(p)}</div>
+        <div class="project-list-body">
           <strong>${escapeHtml(p.name)}</strong>
           <span>${escapeHtml(p.subtitle)}</span>
         </div>
@@ -113,11 +121,10 @@ export function renderProjectsList() {
     )
     .join('');
   return `
-    <div class="preview-section">
+    <div class="preview-section preview-animate-inner">
       <h2>Featured Projects</h2>
-      <p class="preview-muted">Click a project or run <code>open &lt;slug&gt;</code></p>
+      <p class="preview-muted">Run <code>open &lt;slug&gt;</code> to view details</p>
       <div class="project-list">${items}</div>
-      <p class="preview-footnote">Source available on request — repositories are private.</p>
     </div>`;
 }
 
@@ -127,7 +134,7 @@ export function renderProject(slug) {
     return `<div class="preview-section"><h2>Project Not Found</h2><p class="preview-muted">Try <code>projects</code> to see available slugs.</p></div>`;
   }
   return `
-    <div class="preview-section">
+    <div class="preview-section preview-animate-inner">
       <div class="preview-header-row preview-header-stack">
         ${renderThumbnail(project)}
         <div>
@@ -276,17 +283,21 @@ export function renderContact() {
 }
 
 export function renderHelp() {
-  const rows = PORTFOLIO_DATA.commands
-    .map((c) => `<tr><td><code>${escapeHtml(c.cmd)}</code></td><td>${escapeHtml(c.desc)}</td></tr>`)
+  const groups = PORTFOLIO_DATA.commandGroups
+    .map(
+      (group) => `
+      <div class="help-group">
+        <h3>${escapeHtml(group.title)}</h3>
+        ${group.commands
+          .map(
+            (c) =>
+              `<div class="help-row"><code>${escapeHtml(c.cmd)}</code><span>${escapeHtml(c.desc)}</span></div>`
+          )
+          .join('')}
+      </div>`
+    )
     .join('');
-  return `
-    <div class="preview-section">
-      <h2>Commands</h2>
-      <table class="help-table">
-        <thead><tr><th>Command</th><th>Description</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`;
+  return `<div class="preview-section preview-animate-inner"><h2>Commands</h2>${groups}</div>`;
 }
 
 export function renderThemeList(currentTheme) {

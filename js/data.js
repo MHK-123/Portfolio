@@ -51,7 +51,7 @@ export const PORTFOLIO_DATA = {
       name: 'Blueprint Generator',
       subtitle: 'AI-Powered Project Planning & Documentation Platform',
       description:
-        'An AI-assisted SaaS platform that helps developers transform ideas into structured project blueprints, technical documentation, and development roadmaps. It streamlines project planning with guided workflows, AI assistance, collaboration, and exportable documentation.',
+        'An AI-assisted SaaS platform that helps developers transform ideas into structured project blueprints, technical documentation, and development roadmaps.',
       features: [
         'AI-powered project blueprint generation',
         'Interactive project planning workflow',
@@ -63,7 +63,7 @@ export const PORTFOLIO_DATA = {
       ],
       tech: ['Next.js', 'React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'AI APIs'],
       status: 'live',
-      thumbnail: null,
+      thumbnail: './assets/images/blueprint.png',
       placeholderClass: 'placeholder-blueprint',
       links: [
         { label: 'Live Demo', url: 'https://blueprintgenerator.insforge.site/login', primary: true },
@@ -74,7 +74,7 @@ export const PORTFOLIO_DATA = {
       name: 'Finvora ERP',
       subtitle: 'AI-Enhanced ERP & Business Management Platform',
       description:
-        'A modern ERP platform built for businesses to manage accounting, inventory, analytics, and business operations through a unified dashboard. The platform focuses on automation, performance, and scalable architecture while integrating AI-assisted workflows.',
+        'A modern ERP platform built for businesses to manage accounting, inventory, analytics, and business operations through a unified dashboard.',
       features: [
         'Accounting & bookkeeping',
         'Inventory management',
@@ -96,7 +96,7 @@ export const PORTFOLIO_DATA = {
       name: 'Fluxa Media Suite',
       subtitle: 'Cross-Platform Media Downloader & Manager',
       description:
-        'A desktop application for downloading and organizing media from multiple supported platforms through a clean interface. Built to provide a fast, lightweight experience for creators and everyday users.',
+        'A desktop application for downloading and organizing media from multiple supported platforms through a clean interface.',
       features: [
         'Multi-platform media downloading',
         'Audio & video support',
@@ -107,7 +107,7 @@ export const PORTFOLIO_DATA = {
       ],
       tech: ['Python', 'Tkinter', 'yt-dlp'],
       status: 'live',
-      thumbnail: null,
+      thumbnail: './assets/images/fluxa.png',
       placeholderClass: 'placeholder-fluxa',
       links: [
         { label: 'View Product', url: 'https://contra.com/products/6oM1SNAD-fluxa', primary: true },
@@ -118,7 +118,7 @@ export const PORTFOLIO_DATA = {
       name: 'Scribe',
       subtitle: 'Discord Voice & Community Management Bot',
       description:
-        'A feature-rich Discord bot focused on voice channel management, community automation, and server productivity. It helps communities automate repetitive tasks while improving moderation and member experience.',
+        'A feature-rich Discord bot focused on voice channel management, community automation, and server productivity.',
       features: [
         'Voice channel automation',
         'Temporary voice channels',
@@ -130,7 +130,7 @@ export const PORTFOLIO_DATA = {
       ],
       tech: ['Python', 'Discord.py', 'SQLite/PostgreSQL'],
       status: 'live',
-      thumbnail: null,
+      thumbnail: './assets/images/scribe.ico',
       placeholderClass: 'placeholder-scribe',
       links: [{ label: 'Visit Website', url: 'https://www.scribebot.dev/', primary: true }],
     },
@@ -140,7 +140,7 @@ export const PORTFOLIO_DATA = {
       name: 'Discord Subscription Manager',
       subtitle: 'Automated Premium Subscription & Role Management',
       description:
-        'A Discord subscription management system that automates premium memberships through payment integrations. It handles role assignments, renewals, subscription tracking, and webhook processing with minimal manual intervention.',
+        'A Discord subscription management system that automates premium memberships through payment integrations.',
       features: [
         'Automated premium role assignment',
         'Subscription tracking',
@@ -151,7 +151,7 @@ export const PORTFOLIO_DATA = {
       ],
       tech: ['Node.js', 'Discord.js', 'Razorpay', 'PayPal'],
       status: 'live',
-      thumbnail: null,
+      thumbnail: './assets/images/modmail.png',
       placeholderClass: 'placeholder-subscription',
       links: [
         { label: 'Live App', url: 'https://subscription-ttob.onrender.com/', primary: true },
@@ -163,7 +163,7 @@ export const PORTFOLIO_DATA = {
       name: 'DungeonKeeper',
       subtitle: 'Discord Moderation & ModMail System',
       description:
-        'A Discord moderation bot designed to simplify server management through moderation utilities, ModMail support, and automated administrative tools for growing communities.',
+        'A Discord moderation bot designed to simplify server management through moderation utilities, ModMail support, and automated administrative tools.',
       features: [
         'ModMail system',
         'Moderation commands',
@@ -189,7 +189,7 @@ export const PORTFOLIO_DATA = {
     programLength: '1-month program',
     status: 'Ongoing',
     description:
-      'Completed a one-month internship focused on Data Science and Data Analytics, working on AI/ML-related projects while gaining practical experience with data analysis, machine learning concepts, and real-world problem solving.',
+      'Focused on Data Science and Data Analytics, working on AI/ML-related projects while gaining practical experience with data analysis, machine learning concepts, and real-world problem solving.',
     responsibilities: [
       'Worked on AI & Machine Learning projects.',
       'Performed data analysis and preprocessing.',
@@ -262,31 +262,47 @@ export const PORTFOLIO_DATA = {
 
   formspree: 'https://formspree.io/f/mojkoobv',
 
-  commands: [
-    { cmd: 'help', desc: 'Show all available commands' },
-    { cmd: 'about', desc: 'Professional introduction & background' },
-    { cmd: 'skills', desc: 'Technical skills by category' },
-    { cmd: 'projects', desc: 'List all featured projects' },
-    { cmd: 'open <slug>', desc: 'Open project preview (e.g. open blueprint)' },
-    { cmd: 'experience', desc: 'Internship & work experience' },
-    { cmd: 'leadership', desc: 'Community leadership roles' },
-    { cmd: 'achievements', desc: 'Key accomplishments' },
-    { cmd: 'timeline', desc: 'Career & learning journey' },
-    { cmd: 'resume', desc: 'View and download resume' },
-    { cmd: 'contact', desc: 'Contact form & social links' },
-    { cmd: 'socials', desc: 'All social media links' },
-    { cmd: 'theme [name]', desc: 'Switch theme (cyan, matrix, purple, amber, white)' },
-    { cmd: 'clear', desc: 'Clear terminal output' },
-    { cmd: 'history', desc: 'Show command history' },
-    { cmd: 'whoami', desc: 'Quick identity check' },
-    { cmd: 'neofetch', desc: 'System-style info card' },
-    { cmd: 'github', desc: 'Open GitHub profile' },
-    { cmd: 'linkedin', desc: 'Open LinkedIn profile' },
+  commandGroups: [
+    {
+      title: 'General',
+      commands: [
+        { cmd: 'about', desc: 'View profile' },
+        { cmd: 'skills', desc: 'Technical skills' },
+        { cmd: 'projects', desc: 'Featured projects' },
+        { cmd: 'experience', desc: 'Internship' },
+        { cmd: 'leadership', desc: 'Leadership roles' },
+        { cmd: 'resume', desc: 'Download CV' },
+        { cmd: 'contact', desc: 'Contact information' },
+      ],
+    },
+    {
+      title: 'Projects',
+      commands: [
+        { cmd: 'open <project>', desc: 'Open project' },
+        { cmd: 'list', desc: 'List projects' },
+      ],
+    },
+    {
+      title: 'System',
+      commands: [
+        { cmd: 'clear', desc: 'Clear terminal' },
+        { cmd: 'history', desc: 'Command history' },
+        { cmd: 'theme', desc: 'Switch theme' },
+        { cmd: 'whoami', desc: 'Identity check' },
+        { cmd: 'neofetch', desc: 'System info' },
+      ],
+    },
+  ],
+
+  allCommands: [
+    'help', 'about', 'skills', 'projects', 'list', 'open', 'experience', 'leadership',
+    'achievements', 'timeline', 'resume', 'contact', 'socials', 'theme', 'clear',
+    'history', 'whoami', 'neofetch', 'github', 'linkedin',
+    'blueprint', 'finvora', 'fluxa', 'scribe', 'subscription', 'dungeonkeeper',
+    'cyan', 'matrix', 'purple', 'amber', 'white',
   ],
 
   themes: ['cyan', 'matrix', 'purple', 'amber', 'white'],
-
-  quickCommands: ['help', 'about', 'projects', 'resume', 'contact'],
 };
 
 export function getProjectBySlug(slug) {

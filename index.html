@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Hussain — Terminal Portfolio</title>
+    <title>Mohammed Hussain — Portfolio</title>
     <meta name="description" content="Interactive terminal portfolio of Mohammed Hussain — Software Developer specializing in AI/ML and full-stack development.">
     <meta name="google-site-verification" content="google7f7cb1a65e1aa8d9.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Boot Screen -->
-    <div id="boot-screen" class="boot-screen" role="dialog" aria-label="Boot sequence">
+    <div id="boot-screen" class="boot-screen" role="dialog" aria-label="Connecting">
         <div class="boot-container">
-            <div class="boot-logo">MH_PORTFOLIO<span class="boot-cursor">_</span></div>
-            <div class="boot-output" aria-live="polite"></div>
-            <p class="boot-tagline"></p>
-            <p class="boot-hint">Press Enter or click to continue</p>
+            <div class="boot-logo">portfolio<span class="boot-cursor">_</span></div>
+            <pre class="boot-output" aria-live="polite"></pre>
+            <p class="boot-hint">Press Enter to continue</p>
         </div>
-        <div class="scanlines" aria-hidden="true"></div>
     </div>
 
-    <!-- Terminal Workspace -->
     <div id="terminal-workspace" class="workspace hidden">
         <div class="terminal-pane">
             <div class="terminal-header">
@@ -32,21 +28,21 @@
                     <span class="ctrl ctrl-min"></span>
                     <span class="ctrl ctrl-max"></span>
                 </div>
-                <span class="terminal-title">hussain@portfolio:~</span>
+                <span class="terminal-title">hussain@portfolio</span>
             </div>
             <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+            <div id="autocomplete" class="autocomplete hidden" aria-label="Command suggestions"></div>
             <div class="terminal-input-row">
                 <label for="terminal-input" class="sr-only">Terminal command input</label>
-                <span id="terminal-prompt" class="prompt">visitor@portfolio:~$</span>
+                <span id="terminal-prompt" class="prompt">hussain@portfolio ❯</span>
                 <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Enter command">
+                <span class="input-cursor" aria-hidden="true"></span>
             </div>
-            <div id="command-chips" class="command-chips" aria-label="Quick commands"></div>
         </div>
 
         <div id="preview-panel" class="preview-pane">
             <div class="preview-header">
-                <span class="preview-label">preview</span>
-                <button type="button" id="preview-close" class="preview-close" aria-label="Close preview panel">&times;</button>
+                <span class="preview-label">Preview</span>
             </div>
             <div id="preview-content" class="preview-content"></div>
         </div>

@@ -100,9 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
       input: document.getElementById('terminal-input'),
       preview: document.getElementById('preview-content'),
       prompt: document.getElementById('terminal-prompt'),
-      chips: document.getElementById('command-chips'),
       previewOverlay: document.getElementById('preview-panel'),
-      previewClose: document.getElementById('preview-close'),
+      autocomplete: document.getElementById('autocomplete'),
     },
     {
       onNotify: showNotification,
