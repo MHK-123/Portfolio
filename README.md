@@ -1,169 +1,100 @@
-# Mohammed Hussain - Cyberpunk Portfolio
+# Mohammed Hussain — Terminal Portfolio
 
-A futuristic cyberpunk-themed personal portfolio website showcasing skills, projects, and contact information with interactive particle effects and smooth animations.
+An interactive terminal-driven portfolio website. Navigate with commands, explore projects in a live preview panel, and connect via an integrated contact form.
 
-##  Live Demo
+**Live:** [mhk-portfolio.me](https://www.mhk-portfolio.me/)
 
-Visit the live portfolio: https://www.mhk-portfolio.me/
+## Features
 
-##  Features
+- **Boot screen** with animated startup sequence
+- **Command-line navigation** — type commands instead of scrolling
+- **Live preview panel** — rich content renders alongside the terminal
+- **6 featured projects** with status badges and external links
+- **5 color themes** — cyan (default), matrix, purple, amber, white
+- **Responsive design** — full-screen preview overlay on mobile
+- **Contact form** powered by Formspree
+- **Accessibility** — keyboard navigation, focus states, reduced-motion support
 
-###  Design
-- **Cyberpunk Aesthetic**: Dark theme with electric blue (#00f5ff), neon purple (#a855f7), and cyber cyan accents
-- **Interactive Particle Background**: Responsive particle system using Particles.js
-- **Glitch Text Effects**: Animated title with cyberpunk-style glitch effects
-- **Smooth Animations**: Scroll-triggered animations and hover effects
-- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+## Quick Start
 
-###  Interactive Elements
-- **Typing Animation**: Dynamic typing effect in hero section
-- **Skill Progress Bars**: Animated skill level indicators
-- **3D Hover Effects**: CSS transforms on buttons and cards
-- **Smooth Scrolling**: Seamless navigation between sections
-- **Form Validation**: Real-time contact form validation
+```bash
+git clone https://github.com/MHK-123/portfolio.git
+cd portfolio
+# Open index.html in a browser, or serve locally:
+python -m http.server 3000
+```
 
-###  Sections
-- **Hero Section**: Animated introduction with typing effect
-- **About Me**: Personal bio and academic background
-- **Skills**: Technical skills, soft skills, and hobbies showcase
-- **Projects**: Coming soon placeholder with futuristic styling
-- **Contact**: Interactive form and social media links
+Visit `http://localhost:3000`
 
-##  Technologies Used
+## Commands
 
-### Frontend
-- **HTML5**: Semantic markup structure
-- **CSS3**: Custom properties, Grid, Flexbox, animations
-- **JavaScript**: Vanilla JS for interactions and animations
+| Command | Description |
+|---|---|
+| `help` | Show all commands |
+| `about` | Professional introduction |
+| `skills` | Technical skills by category |
+| `projects` | List all projects |
+| `open <slug>` | Open project preview |
+| `experience` | Internship experience |
+| `leadership` | Community leadership |
+| `achievements` | Key accomplishments |
+| `timeline` | Career journey |
+| `resume` | View / download resume |
+| `contact` | Contact form & social links |
+| `socials` | Social media links |
+| `theme [name]` | Switch color theme |
+| `clear` | Clear terminal output |
+| `history` | Command history |
+| `whoami` | Quick identity |
+| `neofetch` | System-style info card |
+| `github` / `linkedin` | Open profiles |
 
-### Libraries & CDNs
-- **Particles.js**: Interactive particle background system
-- **Google Fonts**: Orbitron and Rajdhani font families
-- **Font Awesome**: Icon library for UI elements
-- **DevIcons**: Technical skill icons from reliable CDN
+**Project slugs:** `blueprint`, `finvora`, `fluxa`, `scribe`, `subscription`, `dungeonkeeper`
 
-### Skills Showcased
-- HTML5, CSS3, JavaScript
-- Python, C Programming
-- Git, GitHub
-- Problem Solving, Time Management, Team Collaboration, Adaptability
-
-##  Quick Start
-
-### Prerequisites
-- A modern web browser
-- Basic text editor (VS Code recommended)
-- Git (for version control)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MHK-123/portfolio.git
-   cd portfolio
-   ```
-
-2. **Open the project**
-   ```bash
-   # Open index.html in your browser
-   open index.html
-   # OR use a local server
-   python -m http.server 3000
-   ```
-
-3. **View the website**
-   Open `http://localhost:3000` in your browser
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
-├── index.html          # Main HTML file
-├── style.css           # Stylesheet with cyberpunk theme
-├── script.js           # JavaScript for interactions
-├── README.md           # Project documentation
-├── replit.md           # Technical architecture guide
-└── attached_assets/    # Design reference images
+├── index.html          # Boot screen + terminal shell
+├── style.css           # Themes, layout, responsive styles
+├── js/
+│   ├── data.js         # All portfolio content
+│   ├── terminal.js     # Command parser & boot sequence
+│   ├── preview.js      # Preview panel renderers
+│   └── main.js         # Init, Formspree, notifications
+├── assets/images/      # Project thumbnails & avatar
+└── README.md
 ```
 
-##  Customization
+## Customization
 
-### Colors
-Update CSS custom properties in `style.css`:
-```css
-:root {
-    --primary-color: #00f5ff;      /* Electric blue */
-    --secondary-color: #a855f7;    /* Neon purple */
-    --accent-color: #00ffff;       /* Cyber cyan */
-    --bg-primary: #0a0a0a;         /* Dark background */
-}
-```
+Edit [`js/data.js`](js/data.js) to update bio, projects, skills, experience, social links, and resume URL. No build step required.
 
-### Content
-- **Personal Info**: Update contact details in the Contact section
-- **Skills**: Modify skill levels and add new technologies
-- **Bio**: Update the About Me section with your information
-- **Social Links**: Change URLs to your social media profiles
+### Themes
 
-### Animations
-- **Typing Text**: Edit the words array in `script.js`
-- **Particle Settings**: Modify `particlesJS` configuration
-- **Skill Levels**: Update `data-level` attributes in HTML
+Run `theme matrix`, `theme purple`, `theme amber`, or `theme white` in the terminal. Choice persists in `localStorage`.
 
-##  Deployment
+### Assets
 
-### GitHub Pages
-1. Push your code to a GitHub repository
-2. Go to repository Settings → Pages
-3. Select source branch (usually `main`)
-4. Your site will be available at `https://username.github.io/repository-name`
+Place images in `assets/images/`:
+- `avatar.png` — profile avatar
+- `finvora.png` — Finvora thumbnail
+- `dungeonkeeper.png` — DungeonKeeper thumbnail
 
-### Other Platforms
-- **Netlify**: Drag and drop the project folder
-- **Vercel**: Connect your GitHub repository
-- **Replit**: Import repository and run with HTTP server
+Projects without images use CSS gradient placeholders.
 
-##  Contact Information
+## Deployment
 
-- **Email**: mithanihussain.123@gmail.com
-- **GitHub**: [@MHK-123](https://github.com/MHK-123)
-- **Instagram**: [@insane_mh123](https://instagram.com/insane_mh123)
-- **LinkedIn**: [mohammed-hussain-6306a1334](https://linkedin.com/in/mohammed-hussain-6306a1334)
-- **Discord**: hussain.mhk
+Static hosting works anywhere:
+- **GitHub Pages** — push to `main`, enable Pages
+- **Netlify / Vercel** — drag-and-drop or connect repo
 
-##  Contributing
+## Contact
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-##  License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Future Enhancements
-
-- [ ] Add real projects showcase
-- [ ] Implement dark/light theme toggle
-- [ ] Add blog section
-- [ ] Include testimonials
-- [ ] Add more interactive animations
-- [ ] Implement contact form backend
-- [ ] Add loading animations
-- [ ] Include skills certificates
-
-##  Acknowledgments
-
-- **Particles.js** for the amazing particle background system
-- **Google Fonts** for the cyberpunk typography
-- **DevIcons** for the clean technology icons
-- **Font Awesome** for the comprehensive icon library
-- **Replit** for providing the development environment
+- **Email:** mithanihussain.123@gmail.com
+- **GitHub:** [@MHK-123](https://github.com/MHK-123)
+- **LinkedIn:** [mohammed-hussain-6306a1334](https://www.linkedin.com/in/mohammed-hussain-6306a1334/)
 
 ---
 
-**Built with ❤️ and lots of coffee by Mohammed Hussain**
-
-*Crafted in the digital frontier with cyberpunk aesthetics*
+Built by Mohammed Hussain
