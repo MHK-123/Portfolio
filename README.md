@@ -1,100 +1,218 @@
-# Mohammed Hussain — Terminal Portfolio
+# Mohammed Hussain — Portfolio
 
-An interactive terminal-driven portfolio website. Navigate with commands, explore projects in a live preview panel, and connect via an integrated contact form.
+A modern, responsive developer portfolio showcasing my projects, technical skills, experience, achievements, and professional journey. Built with vanilla HTML, CSS, and JavaScript with multiple UI themes and animated interactive elements.
 
-**Live:** [mhk-portfolio.me](https://www.mhk-portfolio.me/)
-
-## Features
-
-- **Boot screen** with animated startup sequence
-- **Command-line navigation** — type commands instead of scrolling
-- **Live preview panel** — rich content renders alongside the terminal
-- **6 featured projects** with status badges and external links
-- **5 color themes** — cyan (default), matrix, purple, amber, white
-- **Responsive design** — full-screen preview overlay on mobile
-- **Contact form** powered by Formspree
-- **Accessibility** — keyboard navigation, focus states, reduced-motion support
-
-## Quick Start
-
-```bash
-git clone https://github.com/MHK-123/portfolio.git
-cd portfolio
-# Open index.html in a browser, or serve locally:
-python -m http.server 3000
-```
-
-Visit `http://localhost:3000`
-
-## Commands
-
-| Command | Description |
-|---|---|
-| `help` | Show all commands |
-| `about` | Professional introduction |
-| `skills` | Technical skills by category |
-| `projects` | List all projects |
-| `open <slug>` | Open project preview |
-| `experience` | Internship experience |
-| `leadership` | Community leadership |
-| `achievements` | Key accomplishments |
-| `timeline` | Career journey |
-| `resume` | View / download resume |
-| `contact` | Contact form & social links |
-| `socials` | Social media links |
-| `theme [name]` | Switch color theme |
-| `clear` | Clear terminal output |
-| `history` | Command history |
-| `whoami` | Quick identity |
-| `neofetch` | System-style info card |
-| `github` / `linkedin` | Open profiles |
-
-**Project slugs:** `blueprint`, `finvora`, `fluxa`, `scribe`, `subscription`, `dungeonkeeper`
-
-## Project Structure
-
-```
-portfolio/
-├── index.html          # Boot screen + terminal shell
-├── style.css           # Themes, layout, responsive styles
-├── js/
-│   ├── data.js         # All portfolio content
-│   ├── terminal.js     # Command parser & boot sequence
-│   ├── preview.js      # Preview panel renderers
-│   └── main.js         # Init, Formspree, notifications
-├── assets/images/      # Project thumbnails & avatar
-└── README.md
-```
-
-## Customization
-
-Edit [`js/data.js`](js/data.js) to update bio, projects, skills, experience, social links, and resume URL. No build step required.
-
-### Themes
-
-Run `theme matrix`, `theme purple`, `theme amber`, or `theme white` in the terminal. Choice persists in `localStorage`.
-
-### Assets
-
-Place images in `assets/images/`:
-- `avatar.png` — profile avatar
-- `finvora.png` — Finvora thumbnail
-- `dungeonkeeper.png` — DungeonKeeper thumbnail
-
-Projects without images use CSS gradient placeholders.
-
-## Deployment
-
-Static hosting works anywhere:
-- **GitHub Pages** — push to `main`, enable Pages
-- **Netlify / Vercel** — drag-and-drop or connect repo
-
-## Contact
-
-- **Email:** mithanihussain.123@gmail.com
-- **GitHub:** [@MHK-123](https://github.com/MHK-123)
-- **LinkedIn:** [mohammed-hussain-6306a1334](https://www.linkedin.com/in/mohammed-hussain-6306a1334/)
+🌐 **Live Demo:** https://www.mhk-portfolio.me/
 
 ---
 
-Built by Mohammed Hussain
+## ✨ Features
+
+- 🎨 14 switchable UI themes
+  - Minimalism
+  - Maximalism
+  - Cyberpunk
+  - Glassmorphism
+  - Neumorphism
+  - Skeuomorphism
+  - Neo Brutalism
+  - Enterprise
+  - Apple
+  - Claude
+  - GitHub Dark
+  - VS Code
+  - Material Design 3
+  - Retro CRT
+
+- 📱 Fully responsive design
+- ⚡ Built using Vanilla HTML, CSS & JavaScript
+- 🎯 Interactive animated polygon mesh background
+- 🧩 Dynamic content rendered from JavaScript
+- 💼 Professional project showcase
+- 🛠 Skills categorized with technology icons
+- 🏆 Experience & achievements section
+- 🎯 Hobbies & interests
+- 🌐 Social links with custom platform icons
+- 📩 Contact form powered by Formspree
+- 📄 Resume download
+- ♿ Accessible keyboard navigation
+- 🌙 Theme preference saved using LocalStorage
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+
+### Libraries
+
+- Lucide Icons
+
+### Services
+
+- Formspree
+- GitHub Pages / Any Static Hosting
+
+---
+
+## 📂 Project Structure
+
+```text
+portfolio/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+├── assets/
+│   ├── blueprint.jpg
+│   ├── finvora.png
+│   ├── fluxa.png
+│   ├── modmail.png
+│   ├── scribe.png
+│   ├── subscription.png
+│   ├── linkedin.png
+│   ├── gmail.png
+│   ├── discord.png
+│   ├── contra.png
+│   ├── insta.png
+│   ├── x.png
+│   ├── reddit.png
+│   │
+│   └── icons/
+│       ├── python.png
+│       ├── js.png
+│       ├── ts.png
+│       ├── html.png
+│       ├── css.png
+│       ├── react.png
+│       ├── next.png
+│       ├── node.png
+│       ├── express.png
+│       ├── numpy.png
+│       ├── pandas.png
+│       ├── matplot.png
+│       ├── mysql.png
+│       ├── postgre.png
+│       ├── docker.png
+│       ├── linux.png
+│       ├── git.png
+│       └── github.png
+│
+└── README.md
+```
+
+---
+
+## 🚀 Featured Projects
+
+- Blueprint Generator
+- Finvora ERP
+- Fluxa Media Suite
+- Scribe
+- Discord Subscription Manager
+- DungeonKeeper
+
+Each project includes:
+
+- Live demo (where available)
+- Description
+- Technologies used
+- Feature highlights
+- Current status
+
+---
+
+## 📋 Sections
+
+- Hero
+- About
+- Experience
+- Skills
+- Projects
+- Hobbies & Interests
+- Socials
+- Contact
+- Footer
+
+---
+
+## 🚀 Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/MHK-123/portfolio.git
+```
+
+Navigate into the project:
+
+```bash
+cd portfolio
+```
+
+Run a local server:
+
+```bash
+python -m http.server 3000
+```
+
+or
+
+```bash
+npx serve
+```
+
+Visit:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🎨 Themes
+
+The portfolio includes 14 built-in themes that can be switched instantly using the theme selector.
+
+The selected theme is automatically saved using LocalStorage.
+
+---
+
+## 📬 Contact
+
+**Portfolio**
+
+https://www.mhk-portfolio.me
+
+**Email**
+
+mithanihussain.123@gmail.com
+
+**GitHub**
+
+https://github.com/MHK-123
+
+**LinkedIn**
+
+https://www.linkedin.com/in/mohammed-hussain-6306a1334/
+
+**Contra**
+
+https://contra.com/mohammed_hussain_2rqiwses/work?r=mohammed_hussain_2rqiwses
+
+---
+
+## 📄 License
+
+This project is available for viewing and learning purposes.
+
+Please do not redistribute or claim the work as your own.
+
+---
+
+Built with ❤️ by **Mohammed Hussain**
