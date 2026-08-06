@@ -1,65 +1,51 @@
 # Mohammed Hussain — Portfolio
 
-A modern, responsive developer portfolio showcasing my projects, technical skills, experience, achievements, and professional journey. Built with vanilla HTML, CSS, and JavaScript with multiple UI themes and animated interactive elements.
+A modern, responsive developer portfolio showcasing my projects, technical skills, experience, achievements, and professional journey. Built using HTML, CSS, and JavaScript with multiple UI themes and interactive animations.
 
-🌐 **Live Demo:** https://www.mhk-portfolio.me/
-
----
-
-## ✨ Features
-
-- 🎨 14 switchable UI themes
-  - Minimalism
-  - Maximalism
-  - Cyberpunk
-  - Glassmorphism
-  - Neumorphism
-  - Skeuomorphism
-  - Neo Brutalism
-  - Enterprise
-  - Apple
-  - Claude
-  - GitHub Dark
-  - VS Code
-  - Material Design 3
-  - Retro CRT
-
-- 📱 Fully responsive design
-- ⚡ Built using Vanilla HTML, CSS & JavaScript
-- 🎯 Interactive animated polygon mesh background
-- 🧩 Dynamic content rendered from JavaScript
-- 💼 Professional project showcase
-- 🛠 Skills categorized with technology icons
-- 🏆 Experience & achievements section
-- 🎯 Hobbies & interests
-- 🌐 Social links with custom platform icons
-- 📩 Contact form powered by Formspree
-- 📄 Resume download
-- ♿ Accessible keyboard navigation
-- 🌙 Theme preference saved using LocalStorage
+**Live Demo:** https://www.mhk-portfolio.me/
 
 ---
 
-## 🛠 Tech Stack
+## Overview
+
+This portfolio highlights my software development work, ongoing projects, technical skills, experience, and contact information through a clean, responsive interface with multiple design themes.
+
+---
+
+## Features
+
+- 14 switchable UI themes
+- Fully responsive design
+- Interactive animated polygon mesh background
+- Dynamic content rendered using JavaScript
+- Project showcase with live demos
+- Categorized skills with technology icons
+- Experience and achievements section
+- Hobbies and interests
+- Social links with custom platform icons
+- Contact form powered by Formspree
+- Resume download
+- Theme persistence using LocalStorage
+- Accessibility-focused navigation
+
+---
+
+## Tech Stack
 
 ### Frontend
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
-
-### Libraries
-
-- Lucide Icons
+- JavaScript (ES6)
 
 ### Services
 
 - Formspree
-- GitHub Pages / Any Static Hosting
+- GitHub Pages / Static Hosting
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 portfolio/
@@ -82,33 +68,14 @@ portfolio/
 │   ├── insta.png
 │   ├── x.png
 │   ├── reddit.png
-│   │
 │   └── icons/
-│       ├── python.png
-│       ├── js.png
-│       ├── ts.png
-│       ├── html.png
-│       ├── css.png
-│       ├── react.png
-│       ├── next.png
-│       ├── node.png
-│       ├── express.png
-│       ├── numpy.png
-│       ├── pandas.png
-│       ├── matplot.png
-│       ├── mysql.png
-│       ├── postgre.png
-│       ├── docker.png
-│       ├── linux.png
-│       ├── git.png
-│       └── github.png
 │
 └── README.md
 ```
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 - Blueprint Generator
 - Finvora ERP
@@ -119,29 +86,28 @@ portfolio/
 
 Each project includes:
 
-- Live demo (where available)
 - Description
-- Technologies used
 - Feature highlights
-- Current status
+- Technologies used
+- Live demo (where available)
+- Development status
 
 ---
 
-## 📋 Sections
+## Sections
 
-- Hero
+- Home
 - About
 - Experience
 - Skills
 - Projects
-- Hobbies & Interests
+- Hobbies
 - Socials
 - Contact
-- Footer
 
 ---
 
-## 🚀 Running Locally
+## Running Locally
 
 Clone the repository:
 
@@ -155,7 +121,7 @@ Navigate into the project:
 cd portfolio
 ```
 
-Run a local server:
+Start a local server:
 
 ```bash
 python -m http.server 3000
@@ -167,7 +133,7 @@ or
 npx serve
 ```
 
-Visit:
+Open:
 
 ```
 http://localhost:3000
@@ -175,15 +141,30 @@ http://localhost:3000
 
 ---
 
-## 🎨 Themes
+## Themes
 
-The portfolio includes 14 built-in themes that can be switched instantly using the theme selector.
+The portfolio includes fourteen built-in themes:
+
+- Minimalism
+- Maximalism
+- Cyberpunk
+- Glassmorphism
+- Neumorphism
+- Skeuomorphism
+- Neo Brutalism
+- Enterprise
+- Apple
+- Claude
+- GitHub Dark
+- VS Code
+- Material Design 3
+- Retro CRT
 
 The selected theme is automatically saved using LocalStorage.
 
 ---
 
-## 📬 Contact
+## Contact
 
 **Portfolio**
 
@@ -207,12 +188,12 @@ https://contra.com/mohammed_hussain_2rqiwses/work?r=mohammed_hussain_2rqiwses
 
 ---
 
-## 📄 License
+## License
 
-This project is available for viewing and learning purposes.
+This repository is provided for portfolio and learning purposes.
 
 Please do not redistribute or claim the work as your own.
 
 ---
 
-Built with ❤️ by **Mohammed Hussain**
+Built by **Mohammed Hussain**
