@@ -1,54 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="minimalism">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Hussain — Portfolio</title>
-    <meta name="description" content="Interactive terminal portfolio of Mohammed Hussain — Software Developer specializing in AI/ML and full-stack development.">
-    <meta name="google-site-verification" content="google7f7cb1a65e1aa8d9.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mohammed Hussain Portfolio</title>
+<meta name="description" content="Portfolio of Mohammed Hussain, a software developer and AI/ML undergraduate in Mumbai building SaaS products, developer tools and AI-powered applications." />
+<meta name="author" content="Mohammed Hussain" />
+<link rel="canonical" href="https://www.mhk-portfolio.me/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Mohammed Hussain Portfolio" />
+<meta property="og:description" content="SaaS builder, developer-tools maker and AI/ML undergraduate based in Mumbai, India." />
+<meta property="og:url" content="https://www.mhk-portfolio.me/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@Its_MH123" />
+<meta name="theme-color" content="#0b0b0c" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Space+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..700&family=Playfair+Display:wght@500..800&family=Archivo+Black&family=Orbitron:wght@500..800&family=VT323&display=swap" />
+<link rel="stylesheet" href="style.css" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Mohammed Hussain","jobTitle":"Software Developer","address":{"@type":"PostalAddress","addressLocality":"Mumbai","addressCountry":"India"},"email":"mithanihussain.123@gmail.com","url":"https://www.mhk-portfolio.me","sameAs":["https://github.com/MHK-123","https://www.linkedin.com/in/mohammed-hussain-6306a1334/","https://x.com/Its_MH123","https://www.instagram.com/insane_mh123/","https://www.reddit.com/user/mhk-123/"],"alumniOf":{"@type":"EducationalOrganization","name":"Bachelor of Engineering — Artificial Intelligence & Machine Learning"}}
+</script>
 </head>
 <body>
-    <div id="boot-screen" class="boot-screen" role="dialog" aria-label="Connecting">
-        <div class="boot-container">
-            <div class="boot-logo">portfolio<span class="boot-cursor">_</span></div>
-            <pre class="boot-output" aria-live="polite"></pre>
-            <p class="boot-hint">Press Enter to continue</p>
-        </div>
+<a class="skip" href="#about">Skip to content</a>
+<canvas id="mesh" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Mohammed Hussain — home">
+      <span class="brand-mark" aria-hidden="true">MH</span>
+      <span class="brand-text">Mohammed&nbsp;Hussain</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="theme-switcher">
+        <button class="btn btn-ghost" id="themeBtn" aria-expanded="false" aria-haspopup="listbox" aria-controls="themeMenu">
+          <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 2-.9 2-2 0-.6-.2-1-.6-1.4-.3-.4-.4-.8-.4-1.1 0-.8.7-1.5 1.5-1.5H16a5 5 0 0 0 5-5c0-3.9-4-7-9-7Z"/><circle cx="7.5" cy="12" r="1.2"/><circle cx="10" cy="8" r="1.2"/><circle cx="14.5" cy="7.5" r="1.2"/><circle cx="17.5" cy="11" r="1.2"/></svg>
+          <span id="themeLabel">Minimalism</span>
+        </button>
+        <ul class="theme-menu" id="themeMenu" role="listbox" tabindex="-1" aria-label="Design system"></ul>
+      </div>
+      <a class="btn btn-primary" id="resumeBtn" href="https://drive.google.com/file/d/1RgkBbbkoFQveS82xJkwevOKHVr_W-4hT/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+        Download Resume
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+</header>
 
-    <div id="terminal-workspace" class="workspace hidden">
-        <div class="terminal-pane" id="terminal-pane">
-            <div class="terminal-header">
-                <div class="terminal-controls" aria-hidden="true">
-                    <span class="ctrl ctrl-close"></span>
-                    <span class="ctrl ctrl-min"></span>
-                    <span class="ctrl ctrl-max"></span>
-                </div>
-                <span class="terminal-title">hussain@portfolio</span>
-            </div>
-            <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
-            <div id="autocomplete" class="autocomplete hidden" aria-label="Command suggestions"></div>
-            <div class="terminal-input-row" id="terminal-input-row">
-                <label for="terminal-input" class="sr-only">Terminal command input</label>
-                <span id="terminal-prompt" class="prompt">hussain@portfolio ❯</span>
-                <div class="terminal-input-field">
-                    <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" spellcheck="false" aria-label="Enter command">
-                </div>
-            </div>
+<main id="top">
+  <!-- ABOUT / HERO -->
+  <section class="section hero" id="about">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="eyebrow">Mumbai, India · Available for work</p>
+        <h1 class="h1">Mohammed Hussain</h1>
+        <p class="rotator" aria-live="polite">
+          <span class="rotator-static">I build as a</span>
+          <span class="rotator-word" id="rotator">Software Developer</span>
+        </p>
+        <p class="lede">
+          I'm a Software Developer pursuing a Bachelor of Engineering in Artificial Intelligence
+          &amp; Machine Learning. I enjoy building scalable software, developer tools, AI-powered
+          products and modern SaaS applications while continuously learning new technologies and
+          sharpening my engineering skills.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-outline" href="mailto:mithanihussain.123@gmail.com">Get in touch</a>
         </div>
+        <ul class="chips" aria-label="Current focus">
+          <li>Full-Stack Development</li>
+          <li>AI-Powered Products</li>
+          <li>Developer Tools</li>
+          <li>System Design</li>
+        </ul>
+      </div>
 
-        <div id="preview-panel" class="preview-pane">
-            <div class="preview-header">
-                <span class="preview-label">Preview</span>
-            </div>
-            <div id="preview-content" class="preview-content"></div>
+      <aside class="card id-card reveal" aria-label="Profile summary">
+        <div class="id-top">
+          <div class="avatar" aria-hidden="true">MH</div>
+          <div>
+            <h2 class="id-name">Software Developer</h2>
+            <p class="muted">AI/ML Undergraduate · SaaS Builder</p>
+          </div>
         </div>
+        <dl class="id-list">
+          <div><dt>Location</dt><dd>Mumbai, India</dd></div>
+          <div><dt>Degree</dt><dd>Bachelor of Engineering</dd></div>
+          <div><dt>Branch</dt><dd>Artificial Intelligence &amp; Machine Learning</dd></div>
+          <div><dt>Year</dt><dd>Third Year</dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:mithanihussain.123@gmail.com">mithanihussain.123@gmail.com</a></dd></div>
+        </dl>
+      </aside>
     </div>
+  </section>
 
-    <script type="module" src="js/main.js"></script>
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">02 — Experience</p>
+        <h2 class="h2">Where I'm building</h2>
+      </header>
+
+      <div class="timeline">
+        <article class="card exp reveal">
+          <div class="exp-head">
+            <div>
+              <h3 class="h3">ZIDIO</h3>
+              <p class="role">Data Science &amp; Data Analytics Intern</p>
+            </div>
+            <span class="badge badge-live">1 Month · Current</span>
+          </div>
+          <p class="muted">
+            Working as a Data Science &amp; Data Analytics Intern, contributing to AI and Machine
+            Learning initiatives while gaining practical experience solving business problems
+            through data analysis, ML workflows and collaborative development in a client-oriented
+            environment.
+          </p>
+          <ul class="ticks">
+            <li>Real-world Data Science and Analytics tasks</li>
+            <li>Contributing to AI and Machine Learning workflows</li>
+            <li>Analyzing datasets to generate business insights</li>
+            <li>Collaborating with mentors and team members</li>
+            <li>Continuously improving technical and analytical skills</li>
+          </ul>
+        </article>
+
+        <article class="card exp reveal">
+          <div class="exp-head">
+            <div>
+              <h3 class="h3">MUSA</h3>
+              <p class="role">Administrator</p>
+            </div>
+            <span class="badge">June 2026 – Present</span>
+          </div>
+          <p class="muted">
+            Serving as an Administrator within MUSA, supporting community operations, organizing
+            activities and ensuring smooth execution of events and initiatives.
+          </p>
+          <ul class="ticks">
+            <li>Community administration</li>
+            <li>Member support</li>
+            <li>Event coordination</li>
+            <li>Team collaboration</li>
+            <li>Web &amp; Technical Management Team for the MUSA Hackathon</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">03 — Achievements</p>
+        <h2 class="h2">Milestones so far</h2>
+      </header>
+      <div class="grid grid-3" id="achievementsGrid"></div>
+    </div>
+  </section>
+
+
+  <!-- HOBBIES -->
+  <section class="section" id="hobbies">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">04 — Hobbies &amp; Interests</p>
+        <h2 class="h2">Away from the keyboard</h2>
+      </header>
+      <div class="grid grid-4" id="hobbiesGrid"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">05 — Projects</p>
+      <h2 class="h2">Products I've shipped</h2>
+    </header>
+
+    <div class="grid grid-2" id="projectsGrid"></div>
+
+  </div>
+</section>
+
+  <!-- SOCIALS -->
+  <section class="section" id="socials">
+    <div class="wrap">
+      <header class="sec-head reveal">
+        <p class="eyebrow">06 — Socials</p>
+        <h2 class="h2">Find me online</h2>
+      </header>
+      <div class="grid grid-4" id="socialsGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">07 — Contact</p>
+        <h2 class="h2">Let's build something</h2>
+        <p class="lede">
+          Freelance work, internships, open-source collaboration or just a good technical
+          conversation — my inbox is open.
+        </p>
+        <ul class="contact-meta">
+          <li><span class="muted">Email</span><a href="mailto:mithanihussain.123@gmail.com">mithanihussain.123@gmail.com</a></li>
+          <li><span class="muted">Discord</span><span>hussain.mhk</span></li>
+          <li><span class="muted">Based in</span><span>Mumbai, India</span></li>
+        </ul>
+      </div>
+
+      <form class="card form reveal" id="contactForm" action="https://formspree.io/f/mojkoobv" method="POST" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="err-name" />
+          <p class="err" id="err-name" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="255" aria-describedby="err-email" />
+          <p class="err" id="err-email" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required maxlength="120" aria-describedby="err-subject" />
+          <p class="err" id="err-subject" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required maxlength="1000" aria-describedby="err-message"></textarea>
+          <p class="err" id="err-message" role="alert"></p>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Send message</button>
+        <p class="success" id="formSuccess" role="status" hidden>
+          <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg>
+          Thanks — your message is ready to send. I'll reply within a day.
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Mohammed Hussain</p>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
